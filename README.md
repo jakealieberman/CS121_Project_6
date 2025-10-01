@@ -8,8 +8,8 @@ class Date {
 - int year
 + Date()
 + void init(std::string mmddyyyy)
-+ std::string toLongString() const
-+ void printDate() const
++ std::string toLongString()
++ void printDate()
 }
 class Address {
 - std::string street
@@ -18,8 +18,8 @@ class Address {
 - std::string zip
 + Address()
 + void init(std::string street, std::string city, std::string state, std::string zip)
-+ std::string toString() const
-+ void printAddress() const
++ std::string toString()
++ void printAddress()
 }
 class Student {
 - std::string firstName
@@ -30,8 +30,8 @@ class Student {
 - int creditHours
 + Student()
 + void init(std::string csvRow)
-+ void printStudent() const
-+ std::string getLastFirst() const
++ void printStudent()
++ std::string getLastFirst()
 }
 Student --> Address : has-a
 Student --> Date : has-a (dob, grad)
