@@ -2,36 +2,40 @@
 
 ```mermaid
 classDiagram
+
 class Date {
-- int month
-- int day
-- int year
+# string dateString
+# int month
+# int day
+# int year
 + Date()
-+ void init(std::string mmddyyyy)
-+ std::string toLongString()
++ void init(dateString)
 + void printDate()
 }
 class Address {
-- std::string street
-- std::string city
-- std::string state
-- std::string zip
+# string street
+# string city
+# string state
+# string zip
 + Address()
-+ void init(std::string street, std::string city, std::string state, std::string zip)
-+ std::string toString()
++ void init(street, city, state, zip)
 + void printAddress()
 }
 class Student {
-- std::string firstName
-- std::string lastName
-- Address address
-- Date dob
-- Date grad
-- int creditHours
+# string studentString
+# string firstName
+# string lastName
+# Address address
+# Date dob
+# Date grad
+# int creditHours
 + Student()
-+ void init(std::string csvRow)
++ -Student()
++ void init(getString)
 + void printStudent()
-+ std::string getLastFirst()
++ string getFirst()
++ string getLast
++ string getCredit
 }
 Student --> Address : has-a
 Student --> Date : has-a (dob, grad)
