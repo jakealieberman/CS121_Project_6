@@ -1,22 +1,22 @@
+
 #ifndef ADDRESS_H
 #define ADDRESS_H
-
 #include <string>
 
+// class to represent a mailing address
 class Address {
 private:
-    std::string street;
-    std::string city;
-    std::string state;
-    std::string zip; // keep as string to preserve leading zeros
+    std::string street; // street address
+    std::string city;   // city name
+    std::string state;  // state abbreviation
+    std::string zip;    // zip code
 
 public:
-    Address();
+    Address(); // Default constructor
     void init(const std::string& streetIn,
               const std::string& cityIn,
               const std::string& stateIn,
-              const std::string& zipIn);
-    void printAddress() const; // two lines: street\ncity state, zip
+              const std::string& zipIn); // set all fields
+    void printAddress() const; // print the address
 };
-
 #endif // ADDRESS_H

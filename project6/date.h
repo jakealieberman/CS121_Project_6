@@ -1,20 +1,19 @@
 #ifndef DATE_H
 #define DATE_H
-
 #include <string>
 
+// class to represent a calendar date
 class Date {
 private:
-    std::string dateString;  // original "mm/dd/yyyy"
-    int month{0};
-    int day{0};
-    int year{0};
+    std::string dateString; // original date string
+    int month{0};           // month
+    int day{0};             // day
+    int year{0};            // year
 
 public:
-    Date();
-    void init(const std::string& dateStr); // expects "mm/dd/yyyy"
-    void printDate() const;                // prints "MonthName d, yyyy"
-    std::string toLongString() const;      // "MonthName d, yyyy"
+    Date(); // default constructor
+    void init(const std::string& dateStr); // initialize from string
+    void printDate() const; // print the date
+    std::string toLongString() const; // convert to long string
 };
-
 #endif // DATE_H
