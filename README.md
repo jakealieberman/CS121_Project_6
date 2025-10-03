@@ -37,8 +37,8 @@ class Student {
 + string getLast
 + string getCredit
 }
-Student --> Address : has-a
-Student --> Date : has-a (dob, grad)
+Student --> Address
+Student --> Date
 ```
 
 ## Goal
